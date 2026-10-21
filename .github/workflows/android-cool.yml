@@ -49,6 +49,21 @@ jobs:
             "ndk;28.2.13676358" \
             "cmake;3.31.6"
 
+      - name: Fetch ReXGlue dependencies
+        working-directory: nativo
+        shell: bash
+        run: |
+          set -e
+          python3 tools/fetch_thirdparty.py
+
+          echo "===== VERIFY SDL3 ====="
+          test -f sdk/thirdparty/sdl3/android-project/app/src/main/java/org/libsdl/app/SDLActivity.java
+
+          echo "===== VERIFY VULKAN ====="
+          test -d sdk/thirdparty/vulkan-headers/include
+
+          echo "Dependencies ready"
+
       - name: Build Android APK
         working-directory: nativo/android
         run: bash ./gradlew assembleDebug
