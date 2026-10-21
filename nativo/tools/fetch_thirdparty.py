@@ -102,6 +102,9 @@ def main():
                     else:
                         copied += 1
                 else:
+                    if os.path.islink(src) and not os.path.exists(src):
+                        print(f'SKIP broken symlink: {relative_path}')
+                        continue
                     shutil.copy2(src, dst)
                     copied += 1
         print(f'{copied} files copied into sdk/thirdparty, {kept} files of this port kept')
