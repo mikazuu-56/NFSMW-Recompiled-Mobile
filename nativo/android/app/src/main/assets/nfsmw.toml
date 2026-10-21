@@ -13,7 +13,7 @@ nfsmw_cubemap_caras_siempre = 4      # the rear-view mirror face of the car cube
 
 # 1280x720 is what the Switch draws in handheld mode (30 FPS there). A recent phone GPU can take
 # "1920x1080": change it here or in the settings menu (it needs a restart).
-nfsmw_resolucion_interna = "1280x720"
+nfsmw_resolucion_interna = "1024x576"
 
 # Diagnostics off: they only write to the log.
 present_perfil_pintado = false
@@ -23,24 +23,24 @@ nfsmw_streaming_diag = false
 input_xbox_layout = false
 nfsmw_tratamiento_visual = "original"
 nfsmw_intervalo_swap = 0
-nfsmw_sombras_corte = 150
-nfsmw_nativo_texturas_mb_max = 512
-nfsmw_sombras_sin_vegetacion = true
-nfsmw_nativo_sin_desenfoque = true
+nfsmw_sombras_corte = 75 
+nfsmw_nativo_texturas_mb_max = 256 
+nfsmw_sombras_sin_vegetacion = true 
+nfsmw_nativo_sin_desenfoque = true 
 nfsmw_retrovisor_recorte = true
 nfsmw_nativo_pase_area_util = true
 nfsmw_nativo_intercambiar_sin_borrado = true
 nfsmw_nativo_intercambiar_color = false
 nfsmw_nativo_pase_sombras_sin_load = true
 nfsmw_cubemap_caras_max = 6
-nfsmw_guardia_30 = false
+nfsmw_guardia_30 = true 
 nfsmw_guardia_30_presupuesto_us = 31000
 nfsmw_nativo_enviar_tras_sombras = false
 nfsmw_sombras_mapas = 1
 nfsmw_sombras_cada = 1
-nfsmw_nativo_omitir_sombras = false
-nfsmw_limite_fps = "60"
-nfsmw_nativo_pcf_barato = true
+nfsmw_nativo_omitir_sombras = true
+nfsmw_limite_fps = "30" 
+nfsmw_nativo_pcf_barato = true 
 nfsmw_nativo_pcf_barato_alternar_s = 0
 nfsmw_nativo_zcull = true
 nfsmw_nativo_sombras_escala = 100
@@ -97,7 +97,7 @@ nfsmw_nativo_encuadre_cache = true
 nfsmw_nativo_clave_pase_rapida = true
 nfsmw_nativo_alto_util_memo = true
 nfsmw_nativo_cvars_por_fotograma = true
-nfsmw_nativo_anisotropico = 0
+nfsmw_nativo_anisotropico = 0 
 nfsmw_nativo_diag_mip_minimo = 0
 nfsmw_nativo_sombras_sesgo_pendiente = 20
 nfsmw_nativo_sombras_sesgo_constante = 0
@@ -131,8 +131,10 @@ nfsmw_nativo_diag_reutilizar = true
 nfsmw_pegamento_nativo = true
 nfsmw_nativo_indices_neon = true
 nfsmw_nativo_subidas_hilo_prioridad = 46
-nfsmw_reflejo_carretera = true
+nfsmw_reflejo_carretera = false
 nfsmw_reflejo_bajo_demanda = true
 nfsmw_reflejo_refresco = 4
 nfsmw_reflejo_visibilidad = true
 nfsmw_nativo_resolver_contenido_valido = true
+
+nfsmw_android_nucleos_grandes = false
